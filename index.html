@@ -3,25 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo 5 - Sistemas Operativos</title>
+    <title>Grupo 5 - Infraestructura Cloud</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f4f6f9; color: #333; }
-        header { background: #1a252f; color: white; padding: 30px 20px; text-align: center; }
-        header h1 { margin: 0; font-size: 2.5em; }
-        nav { background: #34495e; padding: 12px; text-align: center; position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 1.1em; }
-        nav a:hover { color: #3498db; }
-        .container { max-width: 1100px; margin: 30px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        section { padding: 20px 0; border-bottom: 1px solid #eee; }
-        section:last-child { border-bottom: none; }
-        h2 { color: #2c3e50; border-left: 5px solid #3498db; padding-left: 10px; margin-top: 0; }
-        h3 { color: #34495e; }
-        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: #fff; }
-        th, td { padding: 12px 15px; border: 1px solid #e1e8ed; text-align: left; }
-        th { background: #f8f9fa; color: #2c3e50; font-weight: bold; }
-        tr:nth-child(even) { background: #fcfcfc; }
-        .badge { background: #3498db; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; }
-        .console-box { background: #2c3e50; color: #2ecc71; padding: 15px; border-radius: 5px; font-family: 'Courier New', Courier, monospace; overflow-x: auto; margin: 15px 0; }
+        :root {
+            --primary: #2c3e50;
+            --secondary: #1a252f;
+            --accent: #3498db;
+            --success: #2ecc71;
+            --text: #333333;
+            --bg: #f8f9fa;
+        }
+        
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 0; 
+            background: var(--bg); 
+            color: var(--text); 
+        }
+        
+        header { 
+            background: linear-gradient(135deg, var(--secondary), var(--primary)); 
+            color: white; 
+            padding: 40px 20px; 
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        header h1 { margin: 0; font-size: 2.5em; font-weight: 700; letter-spacing: -0.5px; }
+        header p { margin: 10px 0 0 0; font-size: 1.2em; opacity: 0.9; }
+        
+        nav { 
+            background: var(--secondary); 
+            padding: 0; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        nav a { 
+            color: rgba(255,255,255,0.8); 
+            display: inline-block;
+            padding: 15px 20px;
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover { color: white; background: var(--accent); }
+        
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+        
+        .card { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02), 0 1px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        
+        h2 { color: var(--primary); border-bottom: 3px solid var(--accent); padding-bottom: 8px; margin-top: 0; font-size: 1.8em; }
+        h3 { color: var(--secondary); margin-top: 25px; }
+        
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; border-radius: 8px; overflow: hidden; }
+        th, td { padding: 14px 18px; text-align: left; }
+        th { background: var(--primary); color: white; font-weight: 600; }
+        td { border-bottom: 1px solid #eeeeee; }
+        tr:last-child td { border-bottom: none; }
+        tr:nth-child(even) { background: #fdfdfd; }
+        
+        .badge { color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.8em; font-weight: bold; text-transform: uppercase; }
+        .badge-g5 { background: #e67e22; }
+        
+        .terminal-box { 
+            background: #1e1e1e; 
+            color: #f1f1f1; 
+            padding: 20px; 
+            border-radius: 8px; 
+            font-family: 'Consolas', 'Courier New', Courier, monospace; 
+            overflow-x: auto; 
+            margin: 15px 0;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+            border-left: 5px solid var(--accent);
+        }
+        .terminal-box span { color: var(--success); font-weight: bold; }
+        
+        .diagram-placeholder {
+            background: #eaeded;
+            border: 2px dashed #bdc3c7;
+            padding: 40px;
+            text-align: center;
+            border-radius: 8px;
+            color: #7f8c8d;
+            font-style: italic;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
@@ -29,7 +109,7 @@
     <header>
         <h1>Proyecto Final - Arquitecto Cloud</h1>
         <p>Sistemas Operativos 750001C | Universidad del Valle</p>
-        <span class="badge">GRUPO 5</span>
+        <div style="margin-top: 15px;"><span class="badge badge-g5">Grupo Asignado: Grupo 5</span></div>
     </header>
 
     <nav>
@@ -37,76 +117,128 @@
         <a href="#equipo">Equipo</a>
         <a href="#componente1">Componente 1</a>
         <a href="#componente2">Componente 2</a>
+        <a href="#componente3">Componente 3</a>
         <a href="#conclusiones">Conclusiones</a>
     </nav>
 
     <div class="container">
-        <section id="home">
+        
+        <div class="card" id="home">
             <h2>1. Home (Inicio)</h2>
-            <div class="card" id="home">
-            <h2>1. Home (Inicio)</h2>
-            <p>¡Bienvenidos a la documentación oficial del <strong>Grupo 5</strong>! En este sitio web queremos mostrarles paso a paso cómo diseñamos y construimos desde cero una infraestructura Cloud local para el proyecto final de Sistemas Operativos.</p>
+            <p>Este sitio web constituye la documentación técnica formal desarrollada por nosotros como el <strong>Grupo 5</strong> para la entrega final de la asignatura[cite: 312]. Nuestro objetivo principal es presentar la consolidación, diseño y validación de una infraestructura Cloud local estructurada[cite: 267].</p>
             
-            <p>El reto principal que asumimos como equipo fue actuar como auténticos Arquitectos Cloud. Tuvimos que enfrentarnos a un ecosistema mixto muy interesante: por un lado, configuramos un entorno gráfico usando <strong>Pop!_OS 22.04 LTS</strong> para gestionar las herramientas principales, y por el otro, levantamos un servidor puro de consola con <strong>Rocky Linux 9.4</strong>, logrando que ambas máquinas se comunicaran de forma totalmente segura a través de SSH.</p>
+            <p>En este espacio documentamos el proceso de despliegue paso a paso: desde el aprovisionamiento de máquinas virtuales con esquemas de red interconectados, pasando por la contenerización y aislamiento de microservicios usando Docker Compose, hasta la posterior orquestación y escalabilidad elástica local controlada mediante un clúster de Kubernetes[cite: 283, 291, 301].</p>
             
-            <p>Pero no nos quedamos solo en la virtualización tradicional. Para hacer el despliegue moderno y eficiente, aislamos los servicios de Frontend (Nginx) y Backend (Python) usando contenedores independientes creados sobre una imagen base de <code>rockylinux:9</code> y los conectamos usando Docker Compose. Finalmente, llevamos la aplicación a producción emulando un entorno corporativo de alta disponibilidad mediante un clúster local de Kubernetes con Minikube, donde logramos escalar nuestro despliegue a 3 réplicas en vivo.</p>
-            
-            <p>A lo largo de esta página encontrarán todas nuestras evidencias, las capturas de pantalla con los comandos reales ejecutados en consola, los diagramas de arquitectura que diseñamos y las lecciones que aprendimos rompiéndonos la cabeza con las configuraciones. ¡Esperamos que disfruten el recorrido técnico!</p>
+            <p>A través de las diferentes secciones del menú superior, exponemos de manera rigurosa nuestras evidencias analíticas, configuraciones, diagramas topológicos de bloques y los resultados de ingeniería obtenidos en las fases de desarrollo[cite: 313].</p>
             
             <h3>Video Demostrativo Técnico</h3>
-            <p>En este video de máximo 10 minutos les mostramos las máquinas virtuales corriendo y el funcionamiento real de toda la infraestructura que armamos:</p>
+            <p>Recurso audiovisual obligatorio que valida el correcto funcionamiento de los entornos y servicios integrados[cite: 314, 328]:</p>
             <div class="diagram-placeholder">
-                🎥 [Contenedor de Video de YouTube - Próximamente disponible al subir el enlace del grupo]
+                🎥 [Contenedor de Video de YouTube - Registro audiovisual del Grupo 5]
             </div>
         </div>
 
-        <section id="equipo">
+        <div class="card" id="equipo">
             <h2>2. Equipo de Trabajo</h2>
+            <p>Distribución de roles y componentes asignados para el desarrollo del proyecto[cite: 238, 319]:</p>
             <table>
                 <thead>
                     <tr>
                         <th>Nombre Completo</th>
                         <th>Código Estudiante</th>
-                        <th>Rol / Componente Principal</th>
+                        <th>Rol / Componente Asignado</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Valeria Rodriguez Loiza</td>
+                        <td><strong>Valeria Rodriguez Loiza</strong></td>
                         <td>202560843</td>
-                        <td><span class="badge">Componente 4</span> Sitio Web + Documentación</td>
+                        <td><span class="badge" style="background:#9b59b6;">Componente 4</span> Sitio Web + Gestión DevOps Git</td>
                     </tr>
                     <tr>
-                        <td>Santiago Gil Guzman</td>
+                        <td><strong>Santiago Gil Guzman</strong></td>
                         <td>202560861</td>
-                        <td><span class="badge">Componente 1</span> Virtualización con Linux</td>
+                        <td><span class="badge" style="background:#3498db;">Componente 1</span> Virtualización con Linux</td>
                     </tr>
                     <tr>
-                        <td>Santcocho</td>
+                        <td><strong>Kenneth Gonzales</strong></td>
                         <td>[Ingresar Código]</td>
-                        <td><span class="badge">Componente 2</span> Contenedores Docker</td>
+                        <td><span class="badge" style="background:#2ecc71;">Componente 2</span> Contenedores Docker</td>
+                    </tr>
+                    <tr>
+                        <td><strong>[Nombre Integrante 4]</strong></td>
+                        <td>[Ingresar Código]</td>
+                        <td><span class="badge" style="background:#e74c3c;">Componente 3</span> Kubernetes Clúster</td>
                     </tr>
                 </tbody>
             </table>
-        </section>
+        </div>
 
-        <section id="componente1">
-            <h2>3. Componente 1: Virtualización con Linux</h2>
-            <p><strong>VM 1 (Entorno Gráfico):</strong> Pop!_OS 22.04 LTS [cite: 101]</p>
-            <p><strong>VM 2 (Entorno de Consola):</strong> Rocky Linux 9.4 [cite: 101]</p>
-            <p><em>Próximamente se añadirán aquí las capturas del particionamiento manual (/, swap, /home), comandos de red e interconexión SSH exitosa[cite: 46, 109, 110].</em></p>
-        </section>
+        <div class="card" id="componente1">
+            <h2>3. Componente 1: Virtualización con Linux (30%)</h2>
+            <p>Aprovisionamiento de dos entornos virtuales controlados a través de hipervisor con esquemas de particionamiento manual independiente (mínimo /, swap y /home)[cite: 283, 285, 288]:</p>
+            <ul>
+                <li><strong>Entorno Gráfico (VM 1):</strong> Pop!_OS 22.04 LTS [cite: 280, 286]</li>
+                <li><strong>Entorno de Consola (VM 2):</strong> Rocky Linux 9.4 [cite: 280, 287]</li>
+            </ul>
+            
+            <h3>Comandos de Validación de Red e Interconexión</h3>
+            <p>Comandos ejecutados en consola para la verificación de interfaces de red y túnel SSH seguro hacia la máquina servidor[cite: 224, 225, 289]:</p>
+            <div class="terminal-box">
+                <span>usuario@pop-os:~$</span> ip a<br>
+                <span>usuario@pop-os:~$</span> ping -c 4 [IP_ROCKY_LINUX]<br>
+                <span>usuario@pop-os:~$</span> ssh usuario@[IP_ROCKY_LINUX]
+            </div>
+            
+            <p><em>Espacio destinado para la inserción de las capturas del comando lsblk y la sesión SSH establecida exitosamente[cite: 225, 290]:</em></p>
+            <div class="diagram-placeholder">
+                🖼️ [Capturas de Pantalla - Particionamiento y Conectividad SSH]
+            </div>
+        </div>
 
-        <section id="componente2">
-            <h2>4. Componente 2: Contenedores Docker</h2>
-            <p><strong>Imagen Base del Proyecto:</strong> rockylinux:9 [cite: 101]</p>
-            <p><em>Próximamente se documentará la estructura de carpetas /frontend y /backend, los Dockerfiles optimizados para Rocky Linux usando dnf, y el archivo docker-compose.yml junto con las evidencias del navegador web[cite: 26, 49, 118, 121].</em></p>
-        </section>
+        <div class="card" id="componente2">
+            <h2>4. Componente 2: Contenedores Docker (30%)</h2>
+            <p>Empaquetamiento y despliegue de microservicios web desacoplados utilizando como base la distribución corporativa asignada[cite: 291, 293]:</p>
+            <p><strong>Imagen Base Asignada:</strong> <code style="background:#eaeded; padding:2px 6px; border-radius:4px;">rockylinux:9</code> [cite: 280, 293]</p>
+            
+            <h3>Gestión y Orquestación Multi-Contenedor</h3>
+            <p>Comandos empleados para la construcción y el levantamiento en segundo plano de la pila de servicios[cite: 227, 228, 297]:</p>
+            <div class="terminal-box">
+                <span>usuario@pop-os:~/proyecto$</span> docker compose up -d<br>
+                <span>usuario@pop-os:~/proyecto$</span> docker ps
+            </div>
+
+            <div class="diagram-placeholder">
+                📐 [Diagrama de Bloques - Arquitectura de Comunicación Nginx (Frontend) y Python (Backend)]
+            </div>
+        </div>
+
+        <div class="card" id="componente3">
+            <h2>5. Componente 3: Orquestación con Kubernetes (20%)</h2>
+            <p>Estructuración de alta disponibilidad local por medio de manifiestos declarativos YAML gestionados en Minikube[cite: 301, 303, 304]:</p>
+            
+            <h3>Comandos de Escalabilidad de Pods</h3>
+            <p>Monitoreo y manipulación de réplicas concurrentes del servidor web[cite: 231, 234, 307]:</p>
+            <div class="terminal-box">
+                <span>usuario@pop-os:~$</span> minikube start<br>
+                <span>usuario@pop-os:~$</span> kubectl apply -f deployment.yaml<br>
+                <span>usuario@pop-os:~$</span> kubectl scale deployment nginx --replicas=3<br>
+                <span>usuario@pop-os:~$</span> kubectl get pods
+            </div>
+            
+            <div class="diagram-placeholder">
+                🖼️ [Evidencias de Escalabilidad - Verificación de Pods y Exposición de Servicio NodePort]
+            </div>
+        </div>
         
-        <section id="conclusiones">
-            <h2>5. Conclusiones</h2>
-            <p><em>Se registrarán las conclusiones finales del grupo, lecciones aprendidas y soluciones aplicadas ante los retos de la implementación técnica[cite: 64].</em></p>
-        </section>
+        <div class="card" id="conclusiones">
+            <h2>6. Conclusiones</h2>
+            <p>Análisis técnico sobre la implementación de la infraestructura del proyecto[cite: 243, 312]:</p>
+            <ul>
+                <li><strong>Eficiencia en Recursos Compartidos:</strong> El particionamiento manual y la correcta delimitación de la Swap mitigan cuellos de botella en la ejecución concurrente de hipervisores y clústeres locales[cite: 288, 303, 346].</li>
+                <li><strong>Aislamiento y Portabilidad:</strong> La abstracción mediante Docker y Kubernetes simplifica los entornos de producción reales al evitar conflictos de dependencias entre capas lógicas del sistema operativo[cite: 267, 291, 301].</li>
+            </ul>
+        </div>
     </div>
 
 </body>
