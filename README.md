@@ -8,15 +8,15 @@
 
 | Nombre | Código | Rol |
 |--------|--------|-----|
-| Santiago Gil Guzman | 202560 | Virtualización |
-| Nombre 2 | 20XXXXXX | Docker |
+| Santiago Gil Guzman | 202560861 | Virtualización |
+| Kenneth Gonzales | 20XXXXXX | Docker |
 | Nombre 3 | 20XXXXXX | Kubernetes |
 | Valeria Rodriguez Loaiza | 202560843 | Sitio Web + Documentación |
 
-**Grupo asignado:** Grupo X  
-**Distribución gráfica:** [nombre distro]  
-**Distribución consola:** [nombre distro]  
-**Imagen Docker base:** [imagen:tag]
+**Grupo asignado:** Grupo 5  
+**Distribución gráfica:** Pop!_OS 22.04 LTS  
+**Distribución consola:** Rocky Linux 9.4 
+**Imagen Docker base:** rockylinux:9
 
 ---
 
