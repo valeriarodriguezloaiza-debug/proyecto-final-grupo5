@@ -9,8 +9,9 @@
 | Nombre | Código | Rol |
 |--------|--------|-----|
 | Santiago Gil Guzman | 202560861 | Virtualización |
-| Kenneth Gonzales | 20XXXXXX | Docker |
-| Nombre 3 | 20XXXXXX | Kubernetes |
+| Daniela Paz | 201969075 | Virtualización |
+| Kenneth Gonzalez | 202560854 | Docker |
+| Johan Erazo | 202560853 | Kubernetes |
 | Valeria Rodriguez Loaiza | 202560843 | Sitio Web + Documentación |
 
 **Grupo asignado:** Grupo 5  
