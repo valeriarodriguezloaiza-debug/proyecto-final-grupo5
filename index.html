@@ -43,10 +43,22 @@
     <div class="container">
         <section id="home">
             <h2>1. Home (Inicio)</h2>
-            <p>Este sitio web contiene la documentación oficial y evidencias técnicas de la solución de infraestructura cloud diseñada por el Grupo 5[cite: 134]. El proyecto integra entornos virtuales Linux interconectados, servicios web aislados mediante contenedores Docker y orquestación elástica local con Kubernetes Minikube[cite: 88].</p>
+            <div class="card" id="home">
+            <h2>1. Home (Inicio)</h2>
+            <p>¡Bienvenidos a la documentación oficial del <strong>Grupo 5</strong>! En este sitio web queremos mostrarles paso a paso cómo diseñamos y construimos desde cero una infraestructura Cloud local para el proyecto final de Sistemas Operativos.</p>
+            
+            <p>El reto principal que asumimos como equipo fue actuar como auténticos Arquitectos Cloud. Tuvimos que enfrentarnos a un ecosistema mixto muy interesante: por un lado, configuramos un entorno gráfico usando <strong>Pop!_OS 22.04 LTS</strong> para gestionar las herramientas principales, y por el otro, levantamos un servidor puro de consola con <strong>Rocky Linux 9.4</strong>, logrando que ambas máquinas se comunicaran de forma totalmente segura a través de SSH.</p>
+            
+            <p>Pero no nos quedamos solo en la virtualización tradicional. Para hacer el despliegue moderno y eficiente, aislamos los servicios de Frontend (Nginx) y Backend (Python) usando contenedores independientes creados sobre una imagen base de <code>rockylinux:9</code> y los conectamos usando Docker Compose. Finalmente, llevamos la aplicación a producción emulando un entorno corporativo de alta disponibilidad mediante un clúster local de Kubernetes con Minikube, donde logramos escalar nuestro despliegue a 3 réplicas en vivo.</p>
+            
+            <p>A lo largo de esta página encontrarán todas nuestras evidencias, las capturas de pantalla con los comandos reales ejecutados en consola, los diagramas de arquitectura que diseñamos y las lecciones que aprendimos rompiéndonos la cabeza con las configuraciones. ¡Esperamos que disfruten el recorrido técnico!</p>
+            
             <h3>Video Demostrativo Técnico</h3>
-            <p><em>[Aquí insertaremos el video de YouTube de máximo 10 minutos explicando el funcionamiento completo]</em></p>
-        </section>
+            <p>En este video de máximo 10 minutos les mostramos las máquinas virtuales corriendo y el funcionamiento real de toda la infraestructura que armamos:</p>
+            <div class="diagram-placeholder">
+                🎥 [Contenedor de Video de YouTube - Próximamente disponible al subir el enlace del grupo]
+            </div>
+        </div>
 
         <section id="equipo">
             <h2>2. Equipo de Trabajo</h2>
