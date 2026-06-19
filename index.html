@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo 5 - Sistemas Operativos</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f4f6f9; color: #333; }
+        header { background: #1a252f; color: white; padding: 30px 20px; text-align: center; }
+        header h1 { margin: 0; font-size: 2.5em; }
+        nav { background: #34495e; padding: 12px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 1.1em; }
+        nav a:hover { color: #3498db; }
+        .container { max-width: 1100px; margin: 30px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        section { padding: 20px 0; border-bottom: 1px solid #eee; }
+        section:last-child { border-bottom: none; }
+        h2 { color: #2c3e50; border-left: 5px solid #3498db; padding-left: 10px; margin-top: 0; }
+        h3 { color: #34495e; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: #fff; }
+        th, td { padding: 12px 15px; border: 1px solid #e1e8ed; text-align: left; }
+        th { background: #f8f9fa; color: #2c3e50; font-weight: bold; }
+        tr:nth-child(even) { background: #fcfcfc; }
+        .badge { background: #3498db; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; }
+        .console-box { background: #2c3e50; color: #2ecc71; padding: 15px; border-radius: 5px; font-family: 'Courier New', Courier, monospace; overflow-x: auto; margin: 15px 0; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Proyecto Final - Arquitecto Cloud</h1>
+        <p>Sistemas Operativos 750001C | Universidad del Valle</p>
+        <span class="badge">GRUPO 5</span>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#componente1">Componente 1</a>
+        <a href="#componente2">Componente 2</a>
+        <a href="#conclusiones">Conclusiones</a>
+    </nav>
+
+    <div class="container">
+        <section id="home">
+            <h2>1. Home (Inicio)</h2>
+            <p>Este sitio web contiene la documentación oficial y evidencias técnicas de la solución de infraestructura cloud diseñada por el Grupo 5[cite: 134]. El proyecto integra entornos virtuales Linux interconectados, servicios web aislados mediante contenedores Docker y orquestación elástica local con Kubernetes Minikube[cite: 88].</p>
+            <h3>Video Demostrativo Técnico</h3>
+            <p><em>[Aquí insertaremos el video de YouTube de máximo 10 minutos explicando el funcionamiento completo]</em></p>
+        </section>
+
+        <section id="equipo">
+            <h2>2. Equipo de Trabajo</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre Completo</th>
+                        <th>Código Estudiante</th>
+                        <th>Rol / Componente Principal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Valeria Rodriguez Loiza</td>
+                        <td>202560843</td>
+                        <td><span class="badge">Componente 4</span> Sitio Web + Documentación</td>
+                    </tr>
+                    <tr>
+                        <td>Santiago Gil Guzman</td>
+                        <td>202560861</td>
+                        <td><span class="badge">Componente 1</span> Virtualización con Linux</td>
+                    </tr>
+                    <tr>
+                        <td>Santcocho</td>
+                        <td>[Ingresar Código]</td>
+                        <td><span class="badge">Componente 2</span> Contenedores Docker</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="componente1">
+            <h2>3. Componente 1: Virtualización con Linux</h2>
+            <p><strong>VM 1 (Entorno Gráfico):</strong> Pop!_OS 22.04 LTS [cite: 101]</p>
+            <p><strong>VM 2 (Entorno de Consola):</strong> Rocky Linux 9.4 [cite: 101]</p>
+            <p><em>Próximamente se añadirán aquí las capturas del particionamiento manual (/, swap, /home), comandos de red e interconexión SSH exitosa[cite: 46, 109, 110].</em></p>
+        </section>
+
+        <section id="componente2">
+            <h2>4. Componente 2: Contenedores Docker</h2>
+            <p><strong>Imagen Base del Proyecto:</strong> rockylinux:9 [cite: 101]</p>
+            <p><em>Próximamente se documentará la estructura de carpetas /frontend y /backend, los Dockerfiles optimizados para Rocky Linux usando dnf, y el archivo docker-compose.yml junto con las evidencias del navegador web[cite: 26, 49, 118, 121].</em></p>
+        </section>
+        
+        <section id="conclusiones">
+            <h2>5. Conclusiones</h2>
+            <p><em>Se registrarán las conclusiones finales del grupo, lecciones aprendidas y soluciones aplicadas ante los retos de la implementación técnica[cite: 64].</em></p>
+        </section>
+    </div>
+
+</body>
+</html>
