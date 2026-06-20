@@ -138,7 +138,7 @@ minikube service nginx --url
 
 ## Diagrama de Arquitectura
 
-> Insertar imagen del diagrama (draw.io / Miro / Lucidchart)
+![Arquitectura General](./evidencias-c4/c4-arquitectura-general.png)
 
 ---
 
