@@ -67,9 +67,24 @@ docker/
 ```
 
 ### Evidencias
+
+- Captura verificación de versiones instaladas
+  ![](./componente-2/c2-docker-version.png)
+
+- Captura listado de imágenes (`docker images`)
+  ![](./componente-2/c2-docker-images.png)
+
 - Captura `docker compose up -d`
+  ![](./componente-2/c2-docker-up.png)
+
+- Captura contenedores en ejecución (`docker ps`)
+  ![](./componente-2/c2-docker-ps.png)
+
 - Captura navegador accediendo al frontend
-- Captura `curl http://localhost:5000`
+  ![](./componente-2/c2-web-localhost.png)
+
+- Captura servicio backend respondiendo correctamente
+  ![](./componente-2/c2-web-backend.png)
 
 ### Comandos principales
 ```bash
