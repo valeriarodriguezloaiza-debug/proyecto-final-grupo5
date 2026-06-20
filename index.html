@@ -334,20 +334,28 @@
             <p>Despliegue continuo de la documentación técnica y bitácora del proyecto mediante el uso del servicio GitHub Pages y control de versiones distribuido.</p>
             <p>Este componente integra el control de accesos de colaboradores, el aseguramiento del flujo de trabajo en la rama principal y la actualización automatizada del sitio de cara al cliente o equipo evaluador.</p>
             
-            <div class="diagram-placeholder">
-                🌐 [Sección gestionada activamente - Servido bajo el protocolo HTTPS seguro]
+            <h3>Comandos Git Utilizados para el Control de Versiones</h3>
+            <p>Flujo de comandos esenciales ejecutados en la consola local para actualizar el repositorio y asegurar la persistencia de los cambios:</p>
+            <div class="terminal-box">
+                <span>valeria@dev-pc:~$</span> git status<br>
+                <span>valeria@dev-pc:~$</span> git add .<br>
+                <span>valeria@dev-pc:~$</span> git commit -m "Feat: Integración de evidencias gráficas componentes 1 y 2"<br>
+                <span>valeria@dev-pc:~$</span> git push origin main
+            </div>
+
+            <h3>Evidencias de Configuración y Despliegue Git</h3>
+            <div class="grid-evidencias">
+                <div class="item-evidencia">
+                    <p><strong>1. Historial de Commits en GitHub:</strong> Registro cronológico y estructurado de las contribuciones y cambios realizados en el repositorio por los integrantes del equipo.</p>
+                    <img src="./evidencias-c4/c4-git-log.png" alt="Historial de Commits Git" class="img-evidencia">
+                </div>
+
+                <div class="item-evidencia">
+                    <p><strong>2. Entorno GitHub Pages Activo:</strong> Verificación del estado de despliegue exitoso (Deployment) que sirve este sitio web de manera pública y automatizada bajo protocolo HTTPS seguro.</p>
+                    <img src="./evidencias-c4/c4-github-pages.png" alt="Despliegue GitHub Pages" class="img-evidencia">
+                </div>
             </div>
         </div>
-        
-        <div class="card" id="conclusiones">
-            <h2>7. Conclusiones</h2>
-            <p>Análisis técnico sobre la implementación de la infraestructura del proyecto:</p>
-            <ul>
-                <li><strong>Eficiencia en Recursos Compartidos:</strong> El particionamiento manual y la correcta delimitación de la Swap mitigan cuellos de botella en la ejecución concurrente de hipervisores y clústeres locales.</li>
-                <li><strong>Aislamiento y Portabilidad:</strong> La abstracción mediante Docker y Kubernetes simplifica los entornos de producción reales al evitar conflictos de dependencias entre capas lógicas del sistema operativo.</li>
-            </ul>
-        </div>
-    </div>
 
 </body>
 </html>
