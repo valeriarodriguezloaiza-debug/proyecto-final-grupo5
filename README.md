@@ -144,10 +144,10 @@ minikube service nginx --url
 
 ## Conclusiones
 
-1. [Aprendizaje principal]
-2. [Dificultad encontrada y cómo se resolvió]
-3. [Recomendación para futuros proyectos]
+Análisis técnico sobre la implementación de la infraestructura del proyecto:
 
+1. Eficiencia en Recursos Compartidos: El particionamiento manual y la correcta delimitación de la Swap mitigan cuellos de botella en la ejecución concurrente de hipervisores y clústeres locales.
+2. Aislamiento y Portabilidad: La abstracción mediante Docker y Kubernetes simplifica los entornos de producción reales al evitar conflictos de dependencias entre capas lógicas del sistema operativo.
 ---
 
 *Proyecto desarrollado para la asignatura Sistemas Operativos 750001C — Semestre 1, 2026*
