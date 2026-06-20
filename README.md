@@ -28,9 +28,16 @@
 
 ### Evidencias
 - Captura instalación VM gráfica
+  ![](./evidencias-c1/c1-gparted-popos.png)
 - Captura particionamiento (lsblk)
+  ![](./evidencias-c1/c1-lsblk-popos.png)
+  ![](./evidencias-c1/c1-lsblk-rocky.png)
 - Captura configuración de red
+  ![](./evidencias-c1/c1-os-release-rocky.png)
+  ![](./evidencias-c1/c1-ping-conectividad.png)
 - Captura prueba SSH funcional
+  ![](./evidencias-c1/c1-status-ssh.png)
+  ![](./evidencias-c1/c1-ssh-exitoso.png)
 
 ### Comandos principales
 ```bash
