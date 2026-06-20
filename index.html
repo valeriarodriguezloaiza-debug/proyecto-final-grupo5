@@ -310,24 +310,58 @@
             </div>
         </div>
 
+        <!-- SECCIÓN 5: COMPONENTE 3 -->
         <div class="card" id="componente3">
-            <h2>5. Componente 3: Orquestación con Kubernetes</h2>
-            <p>Estructuración de alta disponibilidad local por medio de manifiestos declarativos YAML gestionados en Minikube:</p>
+            <h2>5. Componente 3: Orquestación de Contenedores con Kubernetes</h2>
+            <p>Implementación, gestión y escalado del entorno de microservicios utilizando un clúster local administrado a través de Minikube en el sistema operativo anfitrión Pop!_OS.</p>
             
-            <h3>Comandos de Escalabilidad de Pods</h3>
-            <p>Monitoreo y manipulación de réplicas concurrentes del servidor web:</p>
+            <h3>Comandos de Infraestructura, Red y Despliegue</h3>
+            <p>Flujo completo de comandos ejecutados en la terminal para auditar el clúster, los controladores, las instancias y las capas de red:</p>
             <div class="terminal-box">
-                <span>usuario@pop-os:~$</span> minikube start<br>
-                <span>usuario@pop-os:~$</span> kubectl apply -f deployment.yaml<br>
-                <span>usuario@pop-os:~$</span> kubectl scale deployment nginx --replicas=3<br>
-                <span>usuario@pop-os:~$</span> kubectl get pods
+                <span>santiagogil@pop-os:~/Proyecto$</span> minikube version && kubectl version --client<br>
+                <span>santiagogil@pop-os:~/Proyecto$</span> kubectl get nodes<br>
+                <span>santiagogil@pop-os:~/Proyecto$</span> kubectl get deployments<br>
+                <span>santiagogil@pop-os:~/Proyecto$</span> kubectl get pods && kubectl get services
             </div>
-            
-            <div class="diagram-placeholder">
-                🖼️ [Evidencias de Escalabilidad - Verificación de Pods y Exposición de Servicio NodePort]
+
+            <h3>Evidencias de Configuración, Orquestación y Capa de Red</h3>
+            <div class="grid-evidencias">
+                <div class="item-evidencia">
+                    <p><strong>1. Instalación de Minikube en Pop!_OS:</strong> Descarga y provisión del binario ejecutable en el directorio local del sistema.</p>
+                    <img src="./componente-3/c3-minikube-install.png" alt="Instalación de Minikube" class="img-evidencia">
+                </div>
+
+                <div class="item-evidencia">
+                    <p><strong>2. Verificación de Minikube:</strong> Comprobación de la versión estable v1.38.1 levantada en la máquina de desarrollo.</p>
+                    <img src="./componente-3/c3-minikube-version.png" alt="Versión de Minikube" class="img-evidencia">
+                </div>
+
+                <div class="item-evidencia">
+                    <p><strong>3. Cliente de Kubernetes (kubectl):</strong> Validación del binario del controlador kubectl versión v1.36.2 para la manipulación del clúster.</p>
+                    <img src="./componente-3/c3-kubectl-version.png" alt="Versión de Kubectl" class="img-evidencia">
+                </div>
+
+                <div class="item-evidencia">
+                    <p><strong>4. Estado del Nodo del Clúster:</strong> Monitoreo del nodo maestro 'minikube' validando su rol de control-plane en estado 'Ready'.</p>
+                    <img src="./componente-3/c3-kubernetes-nodes.png" alt="Nodos de Kubernetes" class="img-evidencia">
+                </div>
+
+                <div class="item-evidencia">
+                    <p><strong>5. Despliegue de Controladores (Deployments):</strong> Orquestación de abstracciones de alto nivel evidenciando el estado activo del backend y frontend.</p>
+                    <img src="./componente-3/c3-kubernetes-deployments.png" alt="Deployments de Kubernetes" class="img-evidencia">
+                </div>
+
+                <div class="item-evidencia">
+                    <p><strong>6. Ciclo de Vida de Instancias (Pods):</strong> Verificación de los contenedores finales en ejecución activa (Status: Running) con tolerancia a fallos inicializada.</p>
+                    <img src="./componente-3/c3-kubernetes-pods.png" alt="Pods de Kubernetes" class="img-evidencia">
+                </div>
+
+                <div class="item-evidencia">
+                    <p><strong>7. Capa de Red y Servicios (Services):</strong> Mapeo lógico y exposición de puertos mediante NodePort para interconectar el tráfico del cliente con la aplicación.</p>
+                    <img src="./componente-3/c3-kubernetes-services.png" alt="Servicios de Kubernetes" class="img-evidencia">
+                </div>
             </div>
         </div>
-
         <div class="card" id="componente4">
             <h2>6. Componente 4: Documentación y Automatización Git</h2>
             <p>Despliegue continuo de la documentación técnica y bitácora del proyecto mediante el uso del servicio GitHub Pages y control de versiones distribuido.</p>
